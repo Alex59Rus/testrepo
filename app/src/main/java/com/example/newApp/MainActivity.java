@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("No crash");
             } else {
                 System.out.println("Crash " + indexLargeHeight);
+                System.out.println("Else some strings");
             }
         }
     }
