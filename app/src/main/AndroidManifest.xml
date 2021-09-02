@@ -10,11 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewProject" >
         <activity
-            android:name=".second_page"
-            android:exported="true"
-            android:label="@string/title_activity_second_page"
-            android:theme="@style/Theme.NewProject.NoActionBar" />
-        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
