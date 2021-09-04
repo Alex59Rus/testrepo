@@ -5,107 +5,193 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    android:padding="16dp">
+
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/text_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="32dp"
+        android:background="@drawable/input_text_calculated"
         android:text="123456789"
+        android:padding="15dp"
+        android:gravity="right"
+        android:textSize="30sp"
         />
 
     <LinearLayout
         style="@style/calc_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text"
-        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_input"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/seven"
                 android:text="7"
                 android:textColor="#FF1000" />
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/eight"
                 android:text="8"
-                android:textColorLink="#FF1000" />
+                android:textColor="#AAAAAA" />
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/nine"
                 android:text="9"
                 android:textColor="#AAAA00" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/four"
                 android:text="4"
                 android:textColor="#FF1000" />
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5" />
+                android:id="@+id/five"
+                android:text="5"
+                android:textColor="#AAAAAA" />
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/six"
                 android:text="6"
                 android:textColor="#AAAA00" />
 
         </LinearLayout>
 
         <LinearLayout
-            style="@style/calc_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/one"
                 android:text="1"
                 android:textColor="#FF1000" />
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/two"
                 android:text="2"
-                android:textColorLink="#FF1000" />
+                android:textColor="#AAAAAA" />
 
             <Button
                 style="@style/calc_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/three"
                 android:text="3"
                 android:textColor="#AAAA00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <View
+                style="@style/calc_button"
+                android:text="1"
+                android:textColor="#FF1000"
+                android:visibility="invisible" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/zero"
+                android:text="0"
+                android:textColor="#CCC333" />
+
+            <View
+                style="@style/calc_button"
+                android:text="3"
+                android:textColor="#AAAA00"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/plus"
+                android:text="+"
+                android:textColor="#FF1000"
+                android:visibility="visible" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/minus"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/percent"
+                android:text="%"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/multiply"
+                android:text="*"
+                android:textColor="#FF1000"
+                android:visibility="visible" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/division"
+                android:text="/"
+                android:textColor="#000000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/equals"
+                android:text="="
+                android:textColor="#D15402"
+                android:textSize="36dp"
+                android:visibility="visible" />
 
         </LinearLayout>
 
