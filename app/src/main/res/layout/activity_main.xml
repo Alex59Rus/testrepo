@@ -1,46 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText"
+    android:padding="16dp">
+
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/text_input"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.463" />
+        android:layout_centerHorizontal="true"
+        android:layout_margin="32dp"
+        android:background="@drawable/input_text_calculated"
+        android:text="123456789"
+        android:padding="15dp"
+        android:gravity="right"
+        android:textSize="30sp"
+        />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+    <LinearLayout
+        style="@style/calc_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_input"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.769"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/seven"
+                android:text="7"
+                android:textColor="#FF1000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/eight"
+                android:text="8"
+                android:textColor="#AAAAAA" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/nine"
+                android:text="9"
+                android:textColor="#AAAA00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/four"
+                android:text="4"
+                android:textColor="#FF1000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/five"
+                android:text="5"
+                android:textColor="#AAAAAA" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/six"
+                android:text="6"
+                android:textColor="#AAAA00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/one"
+                android:text="1"
+                android:textColor="#FF1000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/two"
+                android:text="2"
+                android:textColor="#AAAAAA" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/three"
+                android:text="3"
+                android:textColor="#AAAA00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <View
+                style="@style/calc_button"
+                android:text="1"
+                android:textColor="#FF1000"
+                android:visibility="invisible" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/zero"
+                android:text="0"
+                android:textColor="#CCC333" />
+
+            <View
+                style="@style/calc_button"
+                android:text="3"
+                android:textColor="#AAAA00"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/plus"
+                android:text="+"
+                android:textColor="#FF1000"
+                android:visibility="visible" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/minus"
+                android:text="-"
+                android:textColor="#000000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/percent"
+                android:text="%"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/multiply"
+                android:text="*"
+                android:textColor="#FF1000"
+                android:visibility="visible" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/division"
+                android:text="/"
+                android:textColor="#000000" />
+
+            <Button
+                style="@style/calc_button"
+                android:id="@+id/equals"
+                android:text="="
+                android:textColor="#D15402"
+                android:textSize="36dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
