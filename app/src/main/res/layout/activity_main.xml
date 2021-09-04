@@ -115,8 +115,6 @@
 
             <View
                 style="@style/calc_button"
-                android:text="1"
-                android:textColor="#FF1000"
                 android:visibility="invisible" />
 
             <Button
@@ -127,8 +125,6 @@
 
             <View
                 style="@style/calc_button"
-                android:text="3"
-                android:textColor="#AAAA00"
                 android:visibility="invisible" />
 
         </LinearLayout>
@@ -149,8 +145,7 @@
                 style="@style/calc_button"
                 android:id="@+id/plus"
                 android:text="+"
-                android:textColor="#FF1000"
-                android:visibility="visible" />
+                android:textColor="#FF1000"/>
 
             <Button
                 style="@style/calc_button"
@@ -161,8 +156,7 @@
             <Button
                 style="@style/calc_button"
                 android:id="@+id/percent"
-                android:text="%"
-                android:visibility="visible" />
+                android:text="%"/>
 
         </LinearLayout>
 
@@ -176,22 +170,20 @@
                 style="@style/calc_button"
                 android:id="@+id/multiply"
                 android:text="*"
-                android:textColor="#FF1000"
-                android:visibility="visible" />
+                android:textColor="#FF1000"/>
 
             <Button
                 style="@style/calc_button"
                 android:id="@+id/division"
                 android:text="/"
-                android:textColor="#000000" />
+                android:textColor="#000000"/>
 
             <Button
                 style="@style/calc_button"
                 android:id="@+id/equals"
                 android:text="="
                 android:textColor="#D15402"
-                android:textSize="36dp"
-                android:visibility="visible" />
+                android:textSize="36dp"/>
 
         </LinearLayout>
 
