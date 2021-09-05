@@ -4,10 +4,11 @@ package com.example.newApp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Calc calculator;
-
+    private TextView text;
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.division,
                 R.id.multiply
         };
+        text = findViewById(R.id.text_input);
         calculator = new Calc();
         //создание обработчиков событий для различных кнопок
         View.OnClickListener numberButtonClickListener = new View.OnClickListener() {
@@ -41,12 +43,20 @@ public class MainActivity extends AppCompatActivity {
                 //при нажатии передаем в калькулятор идентификатор нажатой кнопки
                 calculator.onNumPressed(view.getId());
             }
+        };
         View.OnClickListener actionButtonOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            calculator.onActionPressed(view.getId());
+                calculator.onActionPressed(view.getId());
             }
+        };
+        /*прохождение по массиву кнопок, каждую кнопку находим по ID и передаем ей обработчик кнопки
+            который вызывается при нажатии*/
+        for (int i = 0; i < numbersIds.length; i++) {
+            findViewById(numbersIds[i]).setOnClickListener(numberButtonClickListener);
         }
+        for (int i = 0; i < actionsIds.length; i++) {
+            findViewById(actionsIds[i]).setOnClickListener(actionButtonOnClickListener);
         }
     }
 }
