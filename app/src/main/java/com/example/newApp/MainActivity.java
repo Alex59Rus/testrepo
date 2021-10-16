@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //при нажатии передаем в калькулятор идентификатор нажатой кнопки
                 calculator.onNumPressed(view.getId());
+                text.setText(calculator.getText());
             }
         };
         View.OnClickListener actionButtonOnClickListener = new View.OnClickListener() {
